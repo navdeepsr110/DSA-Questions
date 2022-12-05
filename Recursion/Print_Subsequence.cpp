@@ -14,13 +14,14 @@ void PrintSubsequence(int ind, int arr[], vector<int>ds, int n){
         cout<<endl;
         return;
     }
-
+// take or pick the particular index into the subsequence.
     ds.push_back(arr[ind]);
 
     PrintSubsequence(ind+1, arr, ds, n) ;
 
     ds.pop_back();
     
+// not pick, or not take condition, this element is not added to your subsequence.    
     PrintSubsequence(ind+1, arr, ds, n) ;
 }
 
