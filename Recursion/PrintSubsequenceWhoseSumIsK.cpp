@@ -3,8 +3,10 @@
 #include<vector>
 using namespace std;
 
+
 bool Print(int index, int arr[], vector<int> ds, int sum, int s, int n){
      if(index==n){
+      //condition satisfied
         if(s==sum){
         for(auto it: ds){
             cout<<it<<" ";
