@@ -13,7 +13,9 @@ void pushzeroesEnd(int* input, int size){
     for(int i=size;i>=count;i--){
         input[i]=0;
     }
-    for(int j=0;j<)
+    for(int j=0;j<size;j++){
+        
+    }
 }
 
 int main(){
