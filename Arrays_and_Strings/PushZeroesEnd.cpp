@@ -14,7 +14,6 @@ void pushzeroesEnd(int* input, int size){
         input[i]=0;
     }
     for(int j=0;j<size;j++){
-        
     }
 }
 
