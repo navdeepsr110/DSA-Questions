@@ -90,43 +90,84 @@
 //     return 0;
 // }
 
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
-int main(){
-  string s;
-  cin>>s;
-  int size= s.size();
- int n1=s[0]-48;
- int n2=s[1]-48;
- int num=n1*10 + n2;
-  // cout<<n1<<" "<<n2<<endl;
-  // cout<<num;
-  if(s[size-2]=='A' && s[1]=='2' && s[0]=='1'){
-    s[0]='0';
-    s[1]='0';
-  }
-  else if((s[0]=='0' || s[1]=='1') && s[size-2]=='P'){
-    num=num+12;
-    int n3=num%10;
-    // cout<<num<<endl;
-    num=num/10;
-    // int n4=num%100;
-    s[0]=num + 48;
-    s[1]=n3 + 48;
-  }
+// int main(){
+//   string s;
+//   cin>>s;
+//   int size= s.size();
+//  int n1=s[0]-48;
+//  int n2=s[1]-48;
+//  int num=n1*10 + n2;
+//   // cout<<n1<<" "<<n2<<endl;
+//   // cout<<num;
+//   if(s[size-2]=='A' && s[1]=='2' && s[0]=='1'){
+//     s[0]='0';
+//     s[1]='0';
+//   }
+//   else if((s[0]=='0' || s[1]=='1') && s[size-2]=='P'){
+//     num=num+12;
+//     int n3=num%10;
+//     // cout<<num<<endl;
+//     num=num/10;
+//     // int n4=num%100;
+//     s[0]=num + 48;
+//     s[1]=n3 + 48;
+//   }
   // else{
   //   s[0]=1;
   // }
-  int start=0;
-  int length=size-2;
+  // int start=0;
+  // int length=size-2;
   // string ans=s;
- string ans= s.substr(start, length);
+//  string ans= s.substr(start, length);
   //  = s.substr(start, (end - start));
   // for(int i=0;i<size-3;i++){
   //   // cout<<s[i];
   //   ans[i]=s[i];
   // }
-  cout<<ans<<endl;
-  return 0;
+//   cout<<ans<<endl;
+//   return 0;
+// }
+
+// Online C++ compiler to run C++ program online
+// #include <iostream>
+// using namespace std;
+// int main() {
+    // Write C++ code here
+    // std::cout << "Hello world!";
+//     int n;
+//     cin>>n;
+//     int flag=1;
+//     for(int i=2;i<n;i++){
+//         if(n%i==0){
+//             flag=0;
+//             break;
+//         }
+//     }
+//     if(flag==1){
+//         cout<<"Maje";
+//     }
+//     else{
+//         cout<<"Nhi Maje";
+//     }
+
+//     return 0;
+// }
+
+// Reverse a number
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+  int n, rev=0;
+  cin>>n;
+  while(n>0){
+    int temp = n % 10;
+    rev = rev * 10 + temp;
+    n=n/10;
+  }
+  cout<<rev<<endl;
 }
