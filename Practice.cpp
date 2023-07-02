@@ -224,18 +224,112 @@ int main(){
 //   return 0;
 // }
 
-#include<bits/stdc++.h>
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//    int largest=INT_MIN,sec_largest=INT_MIN;
+//    int arr[]={12, 35, 1, 10, 34, 1};
+//    sort(arr, arr+6);
+//     for (int i = 0 ; i < 6 ; i++){
+//         if( arr[i] > largest ){
+//             sec_largest = largest;
+//             largest = arr[i];
+//         }
+// }
+//   cout<<sec_largest<<largest<<endl;
+// }
+
+// your code goes here// Online C++ compiler to run C++ program online
+
+#include <iostream>
 using namespace std;
 
-int main(){
-   int largest=INT_MIN,sec_largest=INT_MIN;
-   int arr[]={12, 35, 1, 10, 34, 1};
-   sort(arr, arr+6);
-    for (int i = 0 ; i < 6 ; i++){
-        if( arr[i] > largest ){
-            sec_largest = largest;
-            largest = arr[i];
+// int binarySearch (int input[], int val, int n){
+//     int s=0;
+//     int e=n-1;
+//     for(int i=0;i<n/2;i++){
+//     int mid=(s+e)/2;
+//     if(input[mid]==val){
+//         return mid;
+//     }
+//     else if(input[mid]<val){
+//         s=mid+1;
+//     }
+//     else{
+//         e=mid-1;
+//     }
+//     }
+//     return -1;
+// }
+
+// int binarySearch(int input[],int n, int val){
+//     int start=0;
+//     int end=n-1;
+//     for(int i=0;i<=n/2;i++){
+//         int mid = (start+end)/2;
+//         if(input[mid]==val){
+//            return mid;
+//         }
+//         else if(input[mid]<val){
+//            start=mid+1;  
+//         }
+//         else{
+//             end=mid-1;
+//         }
+//     }
+//   return -1;
+// }
+
+
+
+
+
+// int main() {
+//     // Write C++ code here
+//     int n;
+//     cin>>n;
+//    int input[n];
+//    for(int i=0;i<n;i++){
+//        cin>>input[i];
+//    }
+//    cout<<"Enter th value";
+//    int val;
+//    cin>>val;
+//   cout<< binarySearch(input, val, n);
+    
+// }
+
+
+#include<iostream>
+using namespace std;
+
+int binarySearch(int input[], int n, int val){
+    int start=0,mid;
+    int end=n-1;
+    for(int i=0;i<=n/2;i++){
+        mid = (start+end)/2;
+        if(input[mid]==val){
+           return mid;
         }
+        else if(input[mid]<val){
+           start=mid+1;  
+        }
+        else{
+            end=mid-1;
+        }
+    }
+  return -1;
 }
-  cout<<sec_largest<<largest<<endl;
+
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+         cin>>arr[i];
+    }
+    int val;
+    cin>>val;
+  cout<<binarySearch(arr,n,val);
 }

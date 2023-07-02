@@ -30,5 +30,4 @@ int main(){
     char str1[size], str2[size];
     cin>>str1>>str2;
     cout<<(isPermutation(str1,str2)? "true":"false");
-
 }
