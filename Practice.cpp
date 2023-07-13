@@ -242,8 +242,8 @@ int main(){
 
 // your code goes here// Online C++ compiler to run C++ program online
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
 // int binarySearch (int input[], int val, int n){
 //     int s=0;
@@ -301,35 +301,80 @@ using namespace std;
 // }
 
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+
+// int binarySearch(int input[], int n, int val){
+//     int start=0,mid;
+//     int end=n-1;
+//     for(int i=0;i<=n/2;i++){
+//         mid = (start+end)/2;
+//         if(input[mid]==val){
+//            return mid;
+//         }
+//         else if(input[mid]<val){
+//            start=mid+1;  
+//         }
+//         else{
+//             end=mid-1;
+//         }
+//     }
+//   return -1;
+// }
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//          cin>>arr[i];
+//     }
+//     int val;
+//     cin>>val;
+//   cout<<binarySearch(arr,n,val);
+// }
+
+// #include<iostream>
+// using namespace std;
+// void selectionSort(int* arr, int n){
+//  for(int i=0;i<n;i++){
+//   for(int j=0;j<n-i-1;j++){
+//     if(arr[j]>arr[j+1]){
+//       int temp=arr[j+1];
+//       arr[j+1]=arr[j];
+//       arr[j]=temp;
+//     }
+//   }
+//  }
+// }
+// int main(){
+// int n=5;
+// int arr[]={3,2,5,1,6};
+// selectionSort(arr,n);
+// for(int i=0;i<n;i++){
+//   cout<<arr[i]<<" ";
+// }
+// }
+
+#include<bits/stdc++.h>
 using namespace std;
-
-int binarySearch(int input[], int n, int val){
-    int start=0,mid;
-    int end=n-1;
-    for(int i=0;i<=n/2;i++){
-        mid = (start+end)/2;
-        if(input[mid]==val){
-           return mid;
-        }
-        else if(input[mid]<val){
-           start=mid+1;  
-        }
-        else{
-            end=mid-1;
-        }
-    }
-  return -1;
+void insertion_sort(int arr[], int n){
+ for(int i=1;i<n;i++){
+  int current=arr[i];
+  int j=i-1;
+  while(arr[j]>current && j>=0){
+    arr[j+1]=arr[j];
+    j--;
+  }
+  arr[j+1]=current;
+ }
 }
-
 int main(){
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++){
-         cin>>arr[i];
-    }
-    int val;
-    cin>>val;
-  cout<<binarySearch(arr,n,val);
+   int arr[]={1,6,5,2,8};
+   int n=5;
+  insertion_sort(arr,n);
+  for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+  }
+
 }
